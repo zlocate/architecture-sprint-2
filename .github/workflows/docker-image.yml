@@ -15,6 +15,6 @@ jobs:
         uses: docker/build-push-action@v6
         with:
           push: true
-          tags: ${{ vars.GITHUB_REPOSITORY }}:latest
-          cache-from: type=registry,ref=${{ vars.GITHUB_REPOSITORY }}:buildcache
-          cache-to: type=registry,ref=${{ vars.GITHUB_REPOSITORY }}:buildcache,mode=max
+          tags: ${{ env.GITHUB_REPOSITORY }}:latest
+          cache-from: type=registry,ref=${{ env.GITHUB_REPOSITORY }}:buildcache
+          cache-to: type=registry,ref=${{ env.GITHUB_REPOSITORY }}:buildcache,mode=max
